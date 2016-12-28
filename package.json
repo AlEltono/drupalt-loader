@@ -1,22 +1,28 @@
 {
-  "name": "drupalt-loader",
+  "name": "drupalt-webpack-plugin",
   "version": "0.0.1",
-  "description": "Drupal.t Webpack Loader - Extracting translatable stings for Drupal HeadLess projects",
-  "main": "index.js",
+  "description": "Drupal.t Webpack Plugin - Extracting translatable stings for Drupal HeadLess projects",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "babel -s inline -d ./dist ./src --source-maps true",
+    "prepublish": "babel -s inline -d ./dist ./src --source-maps true",
+    "prepublish-watch": "babel -s inline -d ./dist ./src --source-maps true --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlEltono/drupalt-loader.git"
+    "url": "git+https://github.com/AlEltono/drupalt-webpack-plugin"
   },
   "author": "Alan Tondelier",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AlEltono/drupalt-loader/issues"
+    "url": "https://github.com/AlEltono/drupalt-webpack-plugin/issues"
   },
-  "homepage": "https://github.com/AlEltono/drupalt-loader#readme",
-  "devDependencies": {
-    "webpack-utils": "^1.0.0"
+  "homepage": "https://github.com/AlEltono/drupalt-webpack-plugin#readme",
+  "dependencies": {
+    "babel-cli": "^6.7.7",
+    "babel-core": "^6.7.7",
+    "babel-preset-metalab": "^0.2.1",
+    "bluebird": "^3.4.7",
+    "loader-utils": "^0.2.16"
   }
 }
