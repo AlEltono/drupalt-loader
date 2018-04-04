@@ -2,7 +2,7 @@
   "name": "drupalt-webpack-plugin",
   "version": "0.0.1",
   "description": "Drupal.t Webpack Plugin - Extracting translatable stings for Drupal HeadLess projects",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "postinstall": "npm run build",
     "build": "babel src --presets  babel-preset-env --out-dir dist"
