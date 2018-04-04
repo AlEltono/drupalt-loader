@@ -2,11 +2,10 @@
   "name": "drupalt-webpack-plugin",
   "version": "0.0.1",
   "description": "Drupal.t Webpack Plugin - Extracting translatable stings for Drupal HeadLess projects",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "postinstall": "babel -s inline -d ./dist ./src --source-maps true",
-    "prepublish": "babel -s inline -d ./dist ./src --source-maps true",
-    "prepublish-watch": "babel -s inline -d ./dist ./src --source-maps true --watch"
+    "postinstall": "npm run build",
+    "build": "babel src --presets  babel-preset-env --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -19,10 +18,13 @@
   },
   "homepage": "https://github.com/AlEltono/drupalt-webpack-plugin#readme",
   "dependencies": {
-    "babel-cli": "^6.7.7",
-    "babel-core": "^6.7.7",
-    "babel-preset-metalab": "^0.2.1",
     "bluebird": "^3.4.7",
     "loader-utils": "^0.2.16"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.38",
+    "@babel/core": "^7.0.0-beta.38",
+    "@babel/preset-env": "^7.0.0-beta.38",
+    "webpack": "^3.0.0"
   }
 }
