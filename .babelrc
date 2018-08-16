@@ -1,5 +1,9 @@
 {
   "presets": [
-    ["env", { "modules": false }]
+    ["env", {
+      "targets": {
+        "node": "6.10"
+      }
+    }]
   ],
 }
